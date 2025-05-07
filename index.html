@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srijee Food Parlor - स्वाद हमारी परम्परा</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Yatra+One&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    
+    <!-- Custom Scripts -->
+    <script src="./src/scripts/main.js" defer></script>
+    <script src="./src/scripts/menu.js" defer></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#8B0000',
+                        'brand-orange': '#D35400',
+                        'brand-yellow': '#F39C12',
+                        'brand-cream': {
+                            light: '#FFF5E6',
+                            DEFAULT: '#FFE4C4',
+                            dark: '#DEB887'
+                        },
+                        'brand-brown': {
+                            lightest: '#FDF5E6',
+                            light: '#DEB887',
+                            DEFAULT: '#8B4513',
+                            dark: '#654321'
+                        },
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'yatra': ['Yatra One', 'cursive'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                        'pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23E31837\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-cream-light font-poppins texture-overlay">
+    <!-- Header Section -->
+    <header class="bg-brand-brown/90 backdrop-blur-md text-white shadow-lg fixed w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-3xl font-yatra text-white">Srijee Food Parlor</h1>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#menu" class="nav-link text-white/90 hover:text-brand-orange transition-colors duration-300 flex items-center text-sm uppercase tracking-wider">
+                    <i class="fas fa-utensils mr-2"></i>Menu
+                </a>
+                <a href="#about" class="nav-link text-white/90 hover:text-brand-orange transition-colors duration-300 flex items-center text-sm uppercase tracking-wider">
+                    <i class="fas fa-info-circle mr-2"></i>About
+                </a>
+                <a href="#contact" class="nav-link text-white/90 hover:text-brand-orange transition-colors duration-300 flex items-center text-sm uppercase tracking-wider">
+                    <i class="fas fa-phone mr-2"></i>Contact
+                </a>
+                <a href="#order" class="bg-brand-orange px-6 py-2 rounded-full text-white hover:bg-brand-brown transition-all duration-300 flex items-center shadow-lg text-sm uppercase tracking-wider font-medium">
+                    <i class="fas fa-shopping-cart mr-2"></i>Order Online
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-gradient-to-br from-brand-cream-light to-brand-cream pt-20 overflow-hidden">
+        <div class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between">
+            <!-- Left Content -->
+            <div class="md:w-1/2 z-10">
+                <h2 class="text-5xl md:text-7xl font-yatra mb-6 leading-tight text-brand-brown">
+                    <span class="text-brand-orange">Delicious</span> & Mouth<br>
+                    Watering Taste
+                </h2>
+                <p class="text-xl mb-8 text-brand-brown-dark">Experience the perfect blend of traditional flavors and modern cuisine</p>
+                <div class="flex space-x-6">
+                    <a href="#menu" class="bg-brand-brown text-white px-8 py-4 rounded-full hover:bg-brand-brown-dark transition-all duration-300 transform hover:scale-105 flex items-center shadow-lg text-sm uppercase tracking-wider font-medium">
+                        <i class="fas fa-book-open mr-2"></i>Explore Menu
+                    </a>
+                    <a href="tel:9837011124" class="border-2 border-brand-brown text-brand-brown px-8 py-4 rounded-full hover:bg-brand-brown hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center shadow-lg text-sm uppercase tracking-wider">
+                        <i class="fas fa-phone-alt mr-2"></i>Call Now
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Content - Food Image Composition -->
+            <div class="md:w-1/2 relative mt-12 md:mt-0">
+                <div class="relative w-[500px] h-[500px] mx-auto">
+                    <!-- Main Circle - Paneer -->
+                    <div class="absolute top-[30%] right-[10%] w-[240px] h-[240px] rounded-full overflow-hidden shadow-2xl border-6 border-white/50 z-20 group">
+                        <img src="./images/paneer1.png" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    </div>
+
+                    <!-- Side Circle - Momos -->
+                    <div class="absolute top-[20%] left-[20%] w-48 h-48 rounded-full overflow-hidden shadow-xl z-30 group">
+                        <img src="./images/momos.png" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-125 group-hover:-rotate-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .group:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        </style>
+    </section>
+
+    <!-- Quick Order Banner -->
+    <div id="order" class="bg-brand-brown text-white py-4 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-6">
+                    <div class="bg-brand-cream-light p-3 rounded-full">
+                        <i class="fas fa-motorcycle text-2xl text-brand-brown"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl">Delivery in 30 Minutes</h3>
+                        <p class="text-white/80 text-sm">Order now and get hot & fresh food</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                    <a href="https://www.swiggy.com/city/bareilly/srijee-food-parlour-macnair-road-prem-nagar-rest431962?source=sharing" target="_blank" class="bg-brand-cream-light px-6 py-2 rounded-full text-brand-brown hover:bg-white transition-all duration-300 flex items-center space-x-2 shadow-lg">
+                        <img src="./images/swiggy.png" alt="Swiggy" class="w-6 h-6">
+                        <span>Swiggy</span>
+                    </a>
+                    <a href="https://zomato.onelink.me/xqzv/ffx45ql0" target="_blank" class="bg-brand-cream-light px-6 py-2 rounded-full text-brand-brown hover:bg-white transition-all duration-300 flex items-center space-x-2 shadow-lg">
+                        <img src="./images/zomato.png" alt="Zomato" class="w-6 h-6">
+                        <span>Zomato</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Category Cards -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-xl">
+                <img src="./images/pizza.png" alt="Pizza" class="w-full h-32 object-cover rounded-xl mb-4">
+                <h3 class="text-brand-brown text-lg font-semibold mb-2 group-hover:text-brand-orange">Pizza</h3>
+                <p class="text-brand-brown-dark/70 text-sm">Authentic Italian style with Indian twist</p>
+            </div>
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-xl">
+                <img src="./images/momos.png" alt="Momos" class="w-full h-32 object-cover rounded-xl mb-4">
+                <h3 class="text-brand-brown text-lg font-semibold mb-2 group-hover:text-brand-orange">Momos</h3>
+                <p class="text-brand-brown-dark/70 text-sm">Steamed perfection with spicy dips</p>
+            </div>
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-xl">
+                <img src="./images/paneer1.png" alt="Paneer Special" class="w-full h-32 object-cover rounded-xl mb-4">
+                <h3 class="text-brand-brown text-lg font-semibold mb-2 group-hover:text-brand-orange">Paneer Special</h3>
+                <p class="text-brand-brown-dark/70 text-sm">Rich and flavorful paneer delicacies</p>
+            </div>
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl p-6 transform hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg hover:shadow-xl">
+                <img src="./images/gulabjamun.png" alt="Desserts" class="w-full h-32 object-cover rounded-xl mb-4">
+                <h3 class="text-brand-brown text-lg font-semibold mb-2 group-hover:text-brand-orange">Desserts</h3>
+                <p class="text-brand-brown-dark/70 text-sm">Sweet endings to perfect meals</p>
+            </div>
+        </div>
+        <!-- And Much More Section -->
+        <div class="text-center mt-12">
+            <p class="text-brand-brown-dark/70 text-lg italic relative inline-block">
+                and much more<span class="text-brand-orange">...</span>
+                <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-brand-orange to-transparent"></span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Restaurant Ambiance Section -->
+    <section class="py-16 bg-gradient-to-br from-brand-cream to-brand-cream-light relative">
+        <div class="absolute inset-0 opacity-5 texture-overlay"></div>
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-3xl font-bold text-center mb-8 text-brand-brown">Our Restaurant</h2>
+            <p class="text-center text-brand-brown-dark/70 mb-12">Experience the perfect blend of comfort and elegance</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Restaurant Description -->
+                <div class="flex flex-col justify-center space-y-4">
+                    <h3 class="text-2xl font-semibold text-brand-brown">Welcome to Srijee Food Parlor</h3>
+                    <p class="text-brand-brown-dark/70">Step into our welcoming space where modern design meets comfortable dining. Our restaurant features:</p>
+                    <ul class="space-y-2 text-brand-brown-dark/70">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-brand-orange mr-2"></i>
+                            Spacious seating arrangement
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-brand-orange mr-2"></i>
+                            Modern interior design
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-brand-orange mr-2"></i>
+                            Vibrant atmosphere
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-brand-orange mr-2"></i>
+                            Perfect for family dining
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="#contact" class="inline-flex items-center text-brand-orange hover:text-brand-brown transition-all duration-300">
+                            <span>Book a Table</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Restaurant Image -->
+                <div class="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+                    <img src="./images/interior.jpg" alt="Srijee Food Parlor Interior - Elegant dining space" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-brown/30 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gradient-to-br from-brand-cream-light to-brand-cream relative">
+        <div class="absolute inset-0 opacity-5 texture-overlay"></div>
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-5xl font-yatra text-center mb-4 text-brand-brown">About Us</h2>
+            <p class="text-xl text-brand-brown-dark/70 text-center mb-12">Our Story & Tradition</p>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-6">
+                    <p class="text-brand-brown-dark/70 leading-relaxed">
+                        Welcome to Srijee Food Parlor, where tradition meets innovation. Our journey began with a simple mission: to serve authentic Indian cuisine with a modern twist. We take pride in our rich culinary heritage and strive to bring the authentic flavors of India to your plate.
+                    </p>
+                    <p class="text-brand-brown-dark/70 leading-relaxed">
+                        Our chefs combine traditional recipes with contemporary cooking techniques to create dishes that are both authentic and innovative. We use only the finest ingredients, carefully selected to ensure the highest quality in every dish we serve.
+                    </p>
+                    <div class="flex items-center justify-center space-x-8 mt-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-orange">5+</div>
+                            <div class="text-brand-brown-dark/70">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-orange">100+</div>
+                            <div class="text-brand-brown-dark/70">Menu Items</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-brand-orange">1000+</div>
+                            <div class="text-brand-brown-dark/70">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-gradient-to-br from-brand-cream to-brand-cream-light relative">
+        <div class="absolute inset-0 opacity-5 texture-overlay"></div>
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-5xl font-yatra text-center mb-4 text-brand-brown">Our Menu</h2>
+            <p class="text-xl text-brand-brown-dark/70 text-center mb-12">Discover our delicious offerings</p>
+            
+            <!-- Menu Images -->
+            <div class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+                <div class="relative cursor-pointer hover:shadow-2xl transition-all duration-500 rounded-xl overflow-hidden h-[400px] group">
+                    <img src="./images/menu.jpg" alt="Srijee Food Parlor Menu Card" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <i class="fas fa-search-plus text-2xl text-white mb-2"></i>
+                        <p class="text-lg text-white">Click to view full menu</p>
+                    </div>
+                </div>
+                <div class="relative cursor-pointer hover:shadow-2xl transition-all duration-500 rounded-xl overflow-hidden h-[400px] group">
+                    <img src="./images/pizzamenu.jpg" alt="Srijee Food Parlor Pizza Menu" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                        <i class="fas fa-pizza-slice text-2xl text-white mb-2"></i>
+                        <p class="text-lg text-white">Click to view pizza menu</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="menu-category px-6 py-2 rounded-full bg-gradient-to-r from-brand-brown to-brand-orange text-white hover:from-brand-orange hover:to-brand-brown transition-all duration-300 flex items-center shadow-lg">
+                    <i class="fas fa-th-large mr-2"></i>All
+                </button>
+                <button class="px-6 py-2 rounded-full bg-white text-brand-brown hover:bg-brand-cream transition-all duration-300 flex items-center shadow-md">
+                    <i class="fas fa-pizza-slice text-xl mr-2 text-brand-orange"></i>Pizza
+                </button>
+                <button class="px-6 py-2 rounded-full bg-white text-brand-brown hover:bg-brand-cream transition-all duration-300 flex items-center shadow-md">
+                    <i class="fas fa-bowl-food text-xl mr-2 text-brand-orange"></i>Dal & Veg
+                </button>
+                <button class="px-6 py-2 rounded-full bg-white text-brand-brown hover:bg-brand-cream transition-all duration-300 flex items-center shadow-md">
+                    <i class="fas fa-cheese text-xl mr-2 text-brand-orange"></i>Paneer Special
+                </button>
+                <button class="px-6 py-2 rounded-full bg-white text-brand-brown hover:bg-brand-cream transition-all duration-300 flex items-center shadow-md">
+                    <i class="fas fa-drumstick-bite text-xl mr-2 text-brand-orange"></i>Momos
+                </button>
+                <button class="px-6 py-2 rounded-full bg-white text-brand-brown hover:bg-brand-cream transition-all duration-300 flex items-center shadow-md">
+                    <i class="fas fa-utensils text-xl mr-2 text-brand-orange"></i>Pasta & Noodles
+                </button>
+                <button class="px-6 py-2 rounded-full bg-white text-brand-brown hover:bg-brand-cream transition-all duration-300 flex items-center shadow-md">
+                    <i class="fas fa-bowl-rice text-xl mr-2 text-brand-orange"></i>Rice & Breads
+                </button>
+                <button class="px-6 py-2 rounded-full bg-white text-brand-brown hover:bg-brand-cream transition-all duration-300 flex items-center shadow-md">
+                    <i class="fas fa-fire text-xl mr-2 text-brand-orange"></i>Tandoor
+                </button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pizza Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-pizza-slice mr-2"></i>Pizza
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Simple Veg Pizza (7"/10")</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹99/₹159</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Onion Lover (7"/10")</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹99/₹159</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Ex Veganza (7"/10")</h4>
+                                <p class="text-sm text-brand-brown-dark/70">Onion, Capsicum, Paneer, Olive, Mushroom, Jalapeno with Extra Cheese</p>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹279/₹419</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Tandoori Delight (7"/10")</h4>
+                                <p class="text-sm text-brand-brown-dark/70">Tandoori Sauce, Tandoori Paneer, Onion, Tomato, Capsicum, Red Paprika</p>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹299/₹449</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Rainbow (7"/10")</h4>
+                                <p class="text-sm text-brand-brown-dark/70">Tandoori Sauce, Hariyali Paneer, Onion, Tomato, Capsicum, Red Paprika</p>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹299/₹449</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Farm Fresh (7"/10")</h4>
+                                <p class="text-sm text-brand-brown-dark/70">Onion, Tomato, Capsicum, Red Paprika, Corn, Olive</p>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹279/₹359</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Try Your Own Pizza</h4>
+                                <p class="text-sm text-brand-brown-dark/70">Any 6 Veg + Any 2 Sauce (Onion, Mushroom, Corn, Yellow Capsicum, Green Capsicum, Red Capsicum, Jalapeno, Tomato, Paneer, Olive)</p>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹279/₹359</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Momos Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-drumstick-bite mr-2"></i>Momos
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Veg Momo (Half/Full)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹30/₹60</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Tom Tom (Half/Full)</h4>
+                                <p class="text-sm text-brand-brown-dark/70">Onion Cheese</p>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹99/₹159</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Veg Momo Fry (Half/Full)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹35/₹70</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Veg Momo Crispy (Half/Full)</h4>
+                                <p class="text-sm text-brand-brown-dark/70">Tomato & Cheese</p>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹40/₹80</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Corn (Half/Full)</h4>
+                                <p class="text-sm text-brand-brown-dark/70">Corn & Cheese</p>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹45/₹90</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Capsicum Cheese (Half/Full)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹50/₹100</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Bloody Mary Momo (Half/Full)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹65/₹130</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Veggies Lover Momo (Half/Full)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹60/₹120</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pasta Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-utensils mr-2"></i>Pasta
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Onion Tomato Cheese</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹119</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Onion Capsicum Cheese</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹119</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Tomato Corn Cheese</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹119</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Tomato Capsicum Cheese</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹119</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Corn Capsicum Cheese</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹119</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">White Sauce Pasta</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹189</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Red Sauce Pasta</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹189</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Creamy Cheese Pasta</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹150</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chaap Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-drumstick-bite mr-2"></i>Chaap
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Malai Chaap</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹80</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Afghani Chaap</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹90</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Onion Capsicum Corn Mashroom</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹150</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Tomato Capsicum Corn Mashroom</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹170</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burger Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-hamburger mr-2"></i>Burger
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Veg Burger</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹50</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Cheese Burger</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹70</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Paneer Onion Cheese</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹149/₹249</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Paneer Capsicum Cheese</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹149/₹249</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Noodles Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-utensils mr-2"></i>Noodles
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Veg Noodles</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹35/₹70</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Garlic Noodles</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹80/₹140</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Hakka Noodles</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹70/₹120</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">Singapuri Noodles</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹90/₹160</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dal & Regular Veg Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-bowl-food mr-2"></i>Dal & Regular Veg
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">दाल फ्राई (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹80/₹140</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">दाल तड़का (देशी घी) (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹90/₹160</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">दाल अमृतसरी (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹110/₹200</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">दाल मखनी (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹110/₹200</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">पिण्डी छोले (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹120/₹220</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">छोले मसाला (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹100/₹180</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">राजमा मसाला (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹100/₹180</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paneer Special Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-cheese mr-2"></i>Paneer Special
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">मटर पनीर (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹120/₹220</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">पालक पनीर (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹120/₹220</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">शाही पनीर (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹140/₹260</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">कढ़ाई पनीर (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹140/₹260</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">पनीर बटर मसाला (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹140/₹260</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">पनीर दो प्याजा (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹120/₹240</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">पनीर भुजिया (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹170/₹320</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breads Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-bread-slice mr-2"></i>Breads
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">तवा चपाती</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹6</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">तवा बटर चपाती</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹8</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">तन्दूरी रोटी</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹12</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">तन्दूरी रोटी (बटर)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹15</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">मिस्सी रोटी</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹30</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">मिस्सी रोटी (प्याज)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹40</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">स्टफ्ड मिस्सी (आलू प्याज)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-bowl-rice mr-2"></i>Rice
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">प्लेन राइस (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹60/₹100</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">जीरा राइस (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹70/₹120</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">मटर पुलाव (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹80/₹160</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">मटर पनीर पुलाव (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹90/₹180</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">कशमीरी पुलाव (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹100/₹200</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">वेज बिरयानी (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹100/₹200</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tandoor Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-fire mr-2"></i>Tandoor
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">पनीर टिक्का</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹160</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">पनीर मलाई टिक्का</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹170</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">पनीर हरियाली टिक्का</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹170</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">मशरूम टिक्का</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹160</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extras Section -->
+                <div class="menu-item bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 glass-effect">
+                    <h3 class="text-2xl font-bold text-brand-brown mb-4 flex items-center">
+                        <i class="fas fa-plus-circle mr-2"></i>Extras
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">ग्रीन सलाद (Per Plate)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹60</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">कचूमर सलाद (Per Plate)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹60</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">रायता बूंदी (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹60/₹100</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">रायता मिक्स (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹70/₹120</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">रायता पाइनेपल (250g/500g)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹100/₹180</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h4 class="font-semibold text-brand-brown-dark">गुलाब जामुन (2 पीस)</h4>
+                            </div>
+                            <span class="text-brand-orange font-semibold">₹40</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View Full Menu Button -->
+            <div class="text-center mt-12">
+                <a href="./public/menu/srijee-menu.pdf" download="Srijee-Food-Parlor-Menu.pdf" 
+                   class="bg-gradient-to-r from-brand-brown to-brand-orange text-white px-8 py-4 rounded-lg hover:from-brand-orange hover:to-brand-brown transition-all duration-300 inline-flex items-center space-x-3 transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-download mr-2"></i>
+                    <span>Download Menu</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gradient-to-br from-brand-cream-light to-brand-cream relative">
+        <div class="absolute inset-0 opacity-5 texture-overlay"></div>
+        <div class="container mx-auto px-4 relative">
+            <h2 class="text-5xl font-yatra text-center mb-4 text-brand-brown">Contact Us</h2>
+            <p class="text-xl text-brand-brown-dark/70 text-center mb-12">Get in Touch</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-brand-orange text-2xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-brand-brown">Location</h3>
+                            <p class="text-brand-brown-dark/70">
+                                Shop No. 6, C.I. Market,<br>
+                                Opp. Prem Nagar Thana,<br>
+                                Bareilly
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-brand-orange text-2xl">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-brand-brown">Phone Numbers</h3>
+                            <p class="text-brand-brown-dark/70">
+                                <a href="tel:9837011124" class="hover:text-brand-orange transition-colors duration-300">9837011124</a><br>
+                                <a href="tel:9756759555" class="hover:text-brand-orange transition-colors duration-300">9756759555</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-brand-orange text-2xl">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 text-brand-brown">Opening Hours</h3>
+                            <p class="text-brand-brown-dark/70">
+                                Monday - Sunday<br>
+                                11:00 AM - 11:00 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.838344481576!2d79.40345377612345!3d28.364359979999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a00a0d0f222222%3A0x1234567890abcdef!2sSrijee%20Food%20Parlor!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-brand-brown via-brand-orange to-brand-brown text-white py-8 relative">
+        <div class="absolute inset-0 opacity-10 texture-overlay"></div>
+        <div class="container mx-auto px-4 relative">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Srijee Food Parlor</h3>
+                    <p>स्वाद हमारी परम्परा</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p>📞 9837011124</p>
+                    <p>📞 9756759555</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="space-y-3">
+                        <a href="https://www.swiggy.com/city/bareilly/srijee-food-parlour-macnair-road-prem-nagar-rest431962?source=sharing" target="_blank" 
+                           class="flex items-center text-white hover:text-brand-cream transition-colors duration-300">
+                            <i class="fab fa-opencart mr-2"></i>
+                            Order on Swiggy
+                        </a>
+                        <a href="https://zomato.onelink.me/xqzv/ffx45ql0" target="_blank"
+                           class="flex items-center text-white hover:text-brand-cream transition-colors duration-300">
+                            <i class="fas fa-utensils mr-2"></i>
+                            Order on Zomato
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-white/20">
+                <p>&copy; 2024 Srijee Food Parlor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this script before the closing body tag -->
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Add animation classes to elements
+        document.querySelectorAll('.menu-item, .hero-button, .menu-category').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.nav-link').forEach(el => {
+            el.classList.add('slide-in');
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80; // Adjust this value based on your header height
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add hover effect to menu items
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateY(-5px)';
+                item.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateY(0)';
+                item.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html> 
